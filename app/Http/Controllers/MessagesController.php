@@ -7,6 +7,7 @@ use App\Messages;
 use App\TokensModel;
 use App\FirebaseHelper;
 use App\Http\Resources\Messages as MessagesResource;
+use App\Http\Resources\TokensModel as TokensModelResource;
 
 class MessagesController extends Controller
 {
