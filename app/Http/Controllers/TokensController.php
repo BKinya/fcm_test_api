@@ -31,7 +31,7 @@ class TokensController extends Controller
     {
         //
         $tokensModel = new TokensModel();
-        $tokensModel->token_string = $request->input('token_string');
+        $tokensModel->token_string = $request->token_string;
         $tokensModel->save(); 
 
         
