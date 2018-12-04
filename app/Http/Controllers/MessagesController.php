@@ -35,14 +35,14 @@ class MessagesController extends Controller
         //get tokens
         $tokens = \App\TokensModel::get(['token_string']);
         
-        return $tokens; 
+        
         
         //FirebaseHelper instance
-        // $firebaseHelper = new \FirebaseHelper();
-        // $message = array(
-        //     'message' => $newMessage
-        // );
-        // $message_status = sendPushNotifications($tokens, $message);
+         $firebaseHelper = new \FirebaseHelper();
+        $message = array(
+            'message' => $newMessage
+        );
+        $message_status = sendPushNotifications($tokens, $message);
 
         // return $message_status;
         
