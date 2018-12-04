@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Messages;
-use App\Tokens;
+use App\TokensModel;
 use App\FirebaseHelper;
 use App\Http\Resources\Messages as MessagesResource;
 
@@ -29,10 +29,10 @@ class MessagesController extends Controller
         $newMessage->message = $request->input('message');
         $newMessage->save();
 
-        return new MessagesResource($newMessage);
+        
 
         //get tokens
-        // $tokens = \App\TokensModel::pluck('token_string');
+        $tokens = \App\TokensModel::pluck('token_string');
         
         // return TokensModelResource::collection($tokens); 
         
