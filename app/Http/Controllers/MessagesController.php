@@ -42,7 +42,7 @@ class MessagesController extends Controller
         $message = array(
             'message' => $newMessage
         );
-        $message_status = sendPushNotifications($tokens, $message);
+        //$message_status = 
 
         // return $message_status;
         
