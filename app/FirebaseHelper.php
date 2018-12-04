@@ -14,7 +14,7 @@
 
             //Authorization headers
             $headers = array (
-                    'Authorization: key=' . "YOUR_KEY_HERE",
+                    'Authorization:key=AAAARxHe2zg:APA91bFiAWGh9px1MN9sI0wB3v7mZ5C45UyAEc0v9nJQHjLvY7H_ZBgcG8xJ3zo8eW2xKQbwq-WJZSLH4TNBLTwmLQfGYDeubeXV6rZlUTaHzCfo-DDKb-MSjHim5A0hZs4_pauaufL',
                     'Content-Type: application/json'
             );
 
@@ -23,7 +23,9 @@
             curl_setopt ( $ch, CURLOPT_POST, true );
             curl_setopt ( $ch, CURLOPT_HTTPHEADER, $headers );
             curl_setopt ( $ch, CURLOPT_RETURNTRANSFER, true );
-            curl_setopt ( $ch, CURLOPT_POSTFIELDS, $fields );
+            curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, 0);
+            curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+            curl_setopt ( $ch, CURLOPT_POSTFIELDS, json_encode($fields ));
 
             $result = curl_exec ( $ch );
             if($result===false){
