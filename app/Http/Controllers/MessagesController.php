@@ -29,10 +29,12 @@ class MessagesController extends Controller
         $newMessage->message = $request->input('message');
         $newMessage->save();
 
+        return new MessagesResource($newMessage);
+
         //get tokens
-        $tokens = \App\TokensModel::pluck('token_string');
+        // $tokens = \App\TokensModel::pluck('token_string');
         
-        return TokensModelResource::collection($tokens); 
+        // return TokensModelResource::collection($tokens); 
         
         //FirebaseHelper instance
         // $firebaseHelper = new \FirebaseHelper();
