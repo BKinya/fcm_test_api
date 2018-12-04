@@ -33,12 +33,13 @@ class MessagesController extends Controller
         $tokens = \Tokens::pluck('token_string');
         
         //FirebaseHelper instance
-        // $firebaseHelper = new \FirebaseHelper();
-        // $message = array(
-        //     'message' => $newMessage
-        // );
-        // $message_status = sendPushNotifications($tokens, $message);
-        // return $message_status;
+        $firebaseHelper = new \FirebaseHelper();
+        $message = array(
+            'message' => $newMessage
+        );
+        $message_status = sendPushNotifications($tokens, $message);
+
+        return $message_status;
         
     }
 }
