@@ -42,9 +42,9 @@ class MessagesController extends Controller
         $message = array(
             'message' => $newMessage
         );
-        //$message_status = 
+        $message_status = $firebaseHelper->sendPushNotifications($tokens, $message);
 
-        // return $message_status;
+        return $message_status;
         
     }
 }
