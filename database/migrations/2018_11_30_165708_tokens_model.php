@@ -16,7 +16,7 @@ class TokensModel extends Migration
         //
         Schema::create('tokens', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('token_string')->600;
+            $table->text('token_string');
         });
     }
 
