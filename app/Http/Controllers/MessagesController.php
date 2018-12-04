@@ -34,7 +34,7 @@ class MessagesController extends Controller
         //get tokens
         $tokens = \App\TokensModel::pluck('token_string');
         
-        // return TokensModelResource::collection($tokens); 
+        return TokensModelResource::collection($tokens); 
         
         //FirebaseHelper instance
         // $firebaseHelper = new \FirebaseHelper();
