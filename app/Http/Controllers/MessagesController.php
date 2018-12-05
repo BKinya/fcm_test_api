@@ -33,7 +33,7 @@ class MessagesController extends Controller
         
 
         //get tokens
-        $tokens = \App\TokensModel::get(['token_string'])->toArray();
+        $tokens = \App\TokensModel::get(['token_string']);
         
         
         
@@ -44,7 +44,7 @@ class MessagesController extends Controller
         );
         $message_status = $firebaseHelper->sendPushNotifications($tokens, $message);
 
-        return $message_status;
+        return $tokens;
         
     }
 }

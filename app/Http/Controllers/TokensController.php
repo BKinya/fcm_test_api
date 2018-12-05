@@ -32,6 +32,7 @@ class TokensController extends Controller
         //
         $tokensModel = new TokensModel();
         $tokensModel->token_string = $request->token_string;
+        //check if the token exists then do what 
         $tokensModel->save(); 
 
         
