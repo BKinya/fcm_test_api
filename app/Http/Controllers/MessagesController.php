@@ -38,7 +38,7 @@ class MessagesController extends Controller
         
         
         //FirebaseHelper instance
-         $firebaseHelper = new \FirebaseHelper();_
+         $firebaseHelper = new \FirebaseHelper();
         $message = array(
             'message' => $newMessage
         );
