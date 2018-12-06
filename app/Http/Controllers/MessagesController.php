@@ -33,7 +33,7 @@ class MessagesController extends Controller
         
 
         //get tokens
-        $tokens = \App\TokensModel::all()->value('token_string');
+        $tokens = \App\TokensModel::all()->value(['token_string']);
         
         
         
